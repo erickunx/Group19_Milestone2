@@ -38,10 +38,19 @@ public class Appointment{
     }
 
     /**
-     * making sure i can commit and push 
+     * occursOn” which takes a LocalDate object and
+returns a boolean (true if the input >= start date and <= end date)
+
      */
 
-
+    public boolean occursOn(LocalDate testDate){
+        if(testDate >= getstartDate() && testDate <= getEndDate()){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
      
 
 }

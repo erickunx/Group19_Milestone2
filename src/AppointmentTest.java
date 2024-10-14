@@ -30,4 +30,9 @@ public class AppointmentTest {
     public void testSetStartDate() {
 
     }
+
+    @Test 
+    public void testOccursOn(){
+        Appointment test = new Appointment("test appointment",)
+    }
 }
