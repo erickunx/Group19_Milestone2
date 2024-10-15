@@ -1,4 +1,3 @@
-AppointmentUpdated.java
 package Appointment;
 
 import java.time.LocalDate;
