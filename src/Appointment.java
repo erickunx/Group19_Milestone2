@@ -1,3 +1,6 @@
+AppointmentUpdated.java
+package Appointment;
+
 import java.time.LocalDate;
 
 
@@ -37,14 +40,12 @@ public class Appointment{
         this.endDate = endDate;
     }
 
-    /**
-     * occursOn” which takes a LocalDate object and
-returns a boolean (true if the input >= start date and <= end date)
-
-     */
 
     public boolean occursOn(LocalDate testDate){
-        if(testDate >= getstartDate() && testDate <= getEndDate()){
+        //Fixed bad operand type for binary operator '>=' error in testing
+        //Using LocalDate comparison method to compare dates
+        if((testDate.isAfter(getStartDate()) || testDate.equals(getStartDate()))
+                && (testDate.isBefore(getEndDate()) || testDate.equals(getEndDate()))){
             return true;
         }
         else{
@@ -56,8 +57,3 @@ returns a boolean (true if the input >= start date and <= end date)
 }
 
    
-
-
-
-
-// Written by Eric Wang
