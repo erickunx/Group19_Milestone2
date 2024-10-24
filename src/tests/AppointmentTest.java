@@ -1,4 +1,4 @@
-package Tests;
+package tests;
 import obj.Appointment;
 
 import org.junit.Before;
