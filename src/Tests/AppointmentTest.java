@@ -1,5 +1,5 @@
 package Tests;
-import obj.Appointment;
+import Appointment.Appointment;
 
 import org.junit.Before;
 import org.junit.Test;
