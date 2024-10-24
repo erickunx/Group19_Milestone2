@@ -52,6 +52,28 @@ public class Appointment{
             return false;
         }
     }
+
+    @Override
+    public String toString() {
+        return String.format("%s: %s - %s", description, startDate, endDate);
+    }
+
+
+    @Override
+    public final boolean equals(Object o) {
+        if (this == o)     return true;
+        if(!(o instanceof Appointment that)) return false;
+        return that.toString().equals(this.toString());
+    }
+
+    @Override
+    public int hashCode() {
+        return toString().hashCode();
+    }
+
+    
+
+    
      
 
 }
