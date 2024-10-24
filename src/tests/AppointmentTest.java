@@ -1,4 +1,7 @@
+package tests;
 import org.junit.Test;
+
+import obj.Appointment;
 
 public class AppointmentTest {
     @Test
