@@ -10,4 +10,16 @@ public class MonthlyAppointment extends Appointment {
     }
 
 
+    @Override
+    public String toString() {
+        return "(monthly)"+ super.toString();
+    }
+
+
+    @Override
+    public boolean occursOn(LocalDate date) {
+        return super.inBetween(date)
+        && date.getDayOfMonth() == getStartDate().getDayOfMonth();
+    }
+
 }

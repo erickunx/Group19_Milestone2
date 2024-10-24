@@ -1,5 +1,5 @@
 package tests;
-import obj.Appointment;
+import obj.*;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -16,7 +16,7 @@ public class AppointmentTest {
         //setup appointment object
         LocalDate startDate = LocalDate.of(2024, 10, 11);
         LocalDate endDate = LocalDate.of(2024, 10, 13);
-        appointment = new Appointment("test", startDate, endDate);
+        appointment = new DailyAppointment("test", startDate, endDate);
     }
 
     @Test

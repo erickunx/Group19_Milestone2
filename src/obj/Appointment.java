@@ -4,7 +4,7 @@ package obj;
 import java.time.LocalDate;
 
 
-public class Appointment{
+public abstract class Appointment{
     private String description;
     private LocalDate startDate;
     private LocalDate endDate;
@@ -39,11 +39,21 @@ public class Appointment{
     public void setEndDate(LocalDate endDate) {
         this.endDate = endDate;
     }
+    
+    /**
+     * check if the given date is in between start and end dates.
+     * 
+     * @param date date to be checked
+     * @return true if date >= start date and <= end date 
+     */
 
-
-    public boolean occursOn(LocalDate testDate){
+    protected boolean inBetween(LocalDate testDate){
         //Fixed bad operand type for binary operator '>=' error in testing
         //Using LocalDate comparison method to compare dates
+
+        //in between = not outside
+
+        //return !date.isBefore(startDate) && !date.isAfter(endDate);
         if((testDate.isAfter(getStartDate()) || testDate.equals(getStartDate()))
                 && (testDate.isBefore(getEndDate()) || testDate.equals(getEndDate()))){
             return true;
@@ -52,6 +62,8 @@ public class Appointment{
             return false;
         }
     }
+
+    public abstract boolean occursOn(LocalDate testDate);
 
     @Override
     public String toString() {
