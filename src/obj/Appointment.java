@@ -1,9 +1,6 @@
-<<<<<<<< HEAD:src/obj/Appointment.java
-package obj;
-========
-package Appointment;
 
->>>>>>>> 2edcfafeb9ff91aee752c4b55cc940355e6dc04c:src/Appointment/Appointment.java
+package obj;
+
 import java.time.LocalDate;
 
 
